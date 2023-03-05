@@ -17,12 +17,12 @@ const Sidebar = ({isOpen, toggle}) => {
                         About
                     </SidebarLink>
 
-                    <SidebarLink to="market" onClick={toggle}>
-                        Market
-                    </SidebarLink>
-
                     <SidebarLink to="discover" onClick={toggle}>
                         Discover
+                    </SidebarLink>
+
+                    <SidebarLink to="explore" onClick={toggle}>
+                        Explore
                     </SidebarLink>
 
                     <SidebarLink to="signup" onClick={toggle}>
