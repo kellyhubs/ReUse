@@ -32,7 +32,7 @@ return (
 
         {/* button */}
         <FirstBtnWrapper>
-        <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
+        <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true">
             {/* Changes the icon of the arrow in the button (animation), when the mouse hovers the button the arrow icon toggles */}
             Get Started{hover ? <ArrowForward /> : <ArrowRight /> }
         </Button>
