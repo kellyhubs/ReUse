@@ -47,7 +47,7 @@ export const FirstContent = styled.div`
 
 // styling the H1 text
 export const FirstH1 = styled.h1`
-    color: #fff;
+    color: #FFFAE9;
     font-size: 48px;
     text-align:center;
 
