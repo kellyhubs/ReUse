@@ -9,7 +9,7 @@ const Navbar = () => {
         {/* Main navbar */}
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="/">ReUse</NavLogo>
+                    <NavLogo to="/">ReUse &nbsp; <i class="fa-solid fa-hand-holding-hand"></i></NavLogo>
                     {/* react router is similar to <a> but instead it's <link>. href= ->  to=*/}
 
 {/* Small navbar icon */}

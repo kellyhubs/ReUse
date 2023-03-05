@@ -1,14 +1,17 @@
 import React from 'react'
 import './App.css'
 import Navbar from './Compontents/Navbar'
-import {BrowserRouter as Router} from 'react-router-dom' //react router
+import {BrowserRouter as Router} from 'react-router-dom' //react router to move between pages
+import Sidebar from './Compontents/Sidebar';
+import Home from './pages'
 
 
 
 function App() {
   return(
     <Router>
-      <Navbar />
+      {/* homepage */}
+      <Home />
     </Router>
   );
 }
