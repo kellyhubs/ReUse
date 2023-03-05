@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // styling the first section
-export const FirstSection = styled.div`
+export const FirstContainer = styled.div`
     background: #0c0c0c;
     display: flex;
     justify-content: center;
