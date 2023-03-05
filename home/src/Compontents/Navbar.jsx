@@ -1,16 +1,32 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom' //react-router for the front end between pages (no data)
+import './Navbar.css'
+import { Button } from './button'
 
 function Navbar(){
 
 const [click, setClick] = useState(false);
 // update the state with inital value of false
+const [button, setButton] = useState(true);
+//updating the state of the button
 
 const handleClick = () => setClick(!click);
 // reverse the state when click -> change the value to true
-
 const closeSmallMenu = () => setClick(false);
 // close the menu (makes it disappear)
+
+const showButton = () => {
+    if(window.innerWidth <= 960){
+        setButton(false);
+    }else{
+        setButton(true);
+    }
+};
+// function that display the button by removing and displaying it depending on the window sizing
+
+window.addEventListener('resize', showButton);
+// when resizing the screen (window) -> button shows 
+
 
     return(
     <>
@@ -50,7 +66,9 @@ const closeSmallMenu = () => setClick(false);
                                 Sign Up
                             </Link>
                         </li>
-                    </ul> 
+                    </ul>  
+                    {/* if button is true, returns button compontent with styling */}
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
             </div>
         </nav>
     </>
