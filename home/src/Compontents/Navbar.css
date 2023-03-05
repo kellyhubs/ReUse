@@ -5,7 +5,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 19px;
+    font-size: 1.2rem;
     position: sticky;
     top:0;
     z-index: 999;
@@ -26,14 +26,14 @@
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 2rem;
     display: flex;
     align-items: center;
 }
 
 .fa-hand-holding-hand{
-    margin-left: 8px;
-    font-size: 28px;
+    margin-left: 0.5rem;
+    font-size: 1.8rem;
 }
 
 .nav-menu{
@@ -44,7 +44,7 @@
     text-align: center;
     width:60vw;
     justify-content: end;
-    margin-right:32px;
+    margin-right:2rem;
 }
 
 .nav-item{
@@ -56,7 +56,7 @@
     display:flex;
     align-items: center;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     height:100%
 }
 
@@ -75,14 +75,14 @@
 
 .small-nav{
     display:none;
-}
+} 
 
 /* @media, rule is used in media queries to apply different styles for different types of sizes */
 /* this is styling for smaller screens */
 @media screen and (max-width: 960px){
     .NavbarItems{
         position: relative;
-    }
+    } 
 
     .nav-menu{
         display: flex;
@@ -96,8 +96,8 @@
         transition: all 0.5s ease;
     }
 
-    .nav-menu.active{
-        background: #5b7e58;
+    .nav-menu:active{
+        background: #5d805a;
         left:0;
         opacity: 1;
         transition: all 0.5 ease;
@@ -106,14 +106,14 @@
 
     .nav-links{
         text-align: center;
-        padding: 32px;
+        padding: 2rem;
         width:100%;
         display:table;
     }
 
     .nav-links:hover{
         background-color: #fffbf2;
-        color: #5D825C;
+        color: #967F72;
         border-radius: 0;
     }
 
@@ -124,19 +124,29 @@
         transform: translate(25%, 50%);
     }
 
+    .small-nav{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
     .fa-times{
         color:#fffbf2;
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .nav-links-small{
         display: block;
         text-align: center;
-        margin: 32px auto;
+        margin: 2rem auto;
         border-radius: 4px;
         width: 80%;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 1.5rem;
         background-color: transparent;
         color:#fffbf2;
         padding: 14px 20px;
@@ -151,3 +161,4 @@
     }
 
 }
+

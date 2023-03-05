@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { Button } from './button'
 import { Link } from 'react-router-dom' //react-router for the front end between pages (no data)
 import './Navbar.css'
-import { Button } from './button'
+
 
 function Navbar(){
 
