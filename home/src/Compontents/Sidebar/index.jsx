@@ -1,30 +1,31 @@
 import React from 'react'
 import { SidebarContainer, CloseIcon, Icon, SidebarWrapper, SidebarMenu, SidebarLink, SideBtnWrap, SidebarRoute} from './SidebarElements';
 
-const Sidebar = () => {
+const Sidebar = ({isOpen, toggle}) => {
+
     return (
-        // sidebar 
-        <SidebarContainer>
-            <Icon>
+        // When clicked on, the toggle of the sidebar will open(show) only if the screen is small
+        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+            <Icon onClick={toggle}>
                 <CloseIcon />
             </Icon>
 
             {/* side bar items */}
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="about">
+                    <SidebarLink to="about" onClick={toggle}>
                         About
                     </SidebarLink>
 
-                    <SidebarLink to="market">
+                    <SidebarLink to="market" onClick={toggle}>
                         Market
                     </SidebarLink>
 
-                    <SidebarLink to="discover">
+                    <SidebarLink to="discover" onClick={toggle}>
                         Discover
                     </SidebarLink>
 
-                    <SidebarLink to="signup">
+                    <SidebarLink to="signup" onClick={toggle}>
                         Sign Up
                     </SidebarLink>
                 </SidebarMenu>

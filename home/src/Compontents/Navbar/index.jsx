@@ -2,7 +2,7 @@ import React from 'react'
 import { FaBars } from 'react-icons/fa' // importing react icons
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements'
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
     return(
         // fragments -> allows you to return multiple compontents instead of using <div>
         <>
@@ -13,7 +13,8 @@ const Navbar = () => {
                     {/* react router is similar to <a> but instead it's <link>. href= ->  to=*/}
 
 {/* Small navbar icon */}
-                    <MobileIcon>
+{/* when clicked the toggle will be trigger for the isOpen function in the page.jsx to show the small navmenu */}
+                    <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
 
