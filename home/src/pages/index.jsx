@@ -1,6 +1,7 @@
 // home page
 
 import React, {useState} from 'react'
+import AboutSection from '../Compontents/AboutSection';
 import FirstSection from '../Compontents/FirstSection';
 import Navbar from '../Compontents/Navbar';
 import Sidebar from '../Compontents/Sidebar';
@@ -18,9 +19,15 @@ const toggle = () => {
 
     return(
         <>
+        {/* Navbar/Sidebar */}
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
+
+        {/* Main Section */}
             <FirstSection />
+
+        {/* About/Info Section */}
+        <AboutSection />
         </>
     );
 };
