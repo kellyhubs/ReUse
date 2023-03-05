@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md' // importing the icons from react icon package
 
 // styling the first section
+    // :before to change the brightness of the container
 export const FirstContainer = styled.div`
     background: #0c0c0c;
     display: flex;
@@ -11,6 +12,18 @@ export const FirstContainer = styled.div`
     height: 800px;
     position: relative;
     z-index: 1;
+
+    :before {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+        z-index: 2;
+    }
 `;
 
 // styling background of the first section 
