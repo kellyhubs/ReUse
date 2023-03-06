@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' //react router to move between pages
 import Home from './pages'
 import SigninPage from './pages/signin';
+import MarketPlace from './pages/MarketPlace';
 
 
 
@@ -16,6 +17,9 @@ function App() {
 
         {/* route to sign in page */}
         <Route path="/signin" element={<SigninPage />} />
+
+        {/* Route to marketplace page */}
+        <Route path="/market" element={<MarketPlace />} />
       </Routes>
     </Router>
   );
