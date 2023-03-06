@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' //react 
 import Home from './pages'
 import SigninPage from './pages/signin';
 import MarketPlace from './pages/MarketPlace';
-
-
+import Garden from './pages/garden';
+import GardenItem from './pages/GardenItem'
 
 function App() {
   return(
@@ -17,9 +17,6 @@ function App() {
 
         {/* route to sign in page */}
         <Route path="/signin" element={<SigninPage />} />
-
-        {/* Route to marketplace page */}
-        <Route path="/market" element={<MarketPlace />} />
       </Routes>
     </Router>
   );
