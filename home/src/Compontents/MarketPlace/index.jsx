@@ -1,9 +1,16 @@
 import React from 'react'
 
+
 export const MarketPlace = () => {
-return(
-    <h1>MARKETPAGE</h1>
-)
+    return(
+        <>
+            <header>
+                <a href = "/market" className="logo">
+                <span>ReUse</span> <i class="fa-solid fa-hand-holding-hand"></i>
+                </a>
+            </header>
+        </>
+    )
 }
 
 export default MarketPlace;
