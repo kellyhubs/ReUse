@@ -26,7 +26,7 @@ export const homeObjTwo = {
     lightBg: false,
     lightText: true,
     lightTextDesc: false,
-    topLine: 'The Community',
+    topLine: 'The Connections',
     headline: 'Foster Community with a more Sustainable Lifestyle',
     description: 'Create mutual identity within a community surrounding sustainability and share contributions with others.',
     buttonLabel: 'Learn More',

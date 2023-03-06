@@ -19,21 +19,22 @@ const Navbar = ({ toggle }) => {
                     </MobileIcon>
 
 {/* Container for the menu items */}
+{/* react-scoll properties to make the active class to work/ hover */}
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offet={-80}>About</NavLinks>
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="discover" activeClassName="active">Discover</NavLinks>
+                            <NavLinks to="discover" smooth={true} duration={500} spy={true} exact='true' offet={-80}>Discover</NavLinks>
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="explore" activeClassName="active">Explore</NavLinks>
+                            <NavLinks to="explore" smooth={true} duration={500} spy={true} exact='true' offet={-80}>Explore</NavLinks>
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="signup" activeClassName="active">Sign Up</NavLinks>
+                            <NavLinks to="signup" smooth={true} duration={500} spy={true} exact='true' offet={-80}>Sign Up</NavLinks>
                         </NavItem>
                     </NavMenu>
 
