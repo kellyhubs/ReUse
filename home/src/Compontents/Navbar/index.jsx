@@ -25,15 +25,15 @@ const Navbar = ({ toggle }) => {
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="discover">Discover</NavLinks>
+                            <NavLinks to="discover" activeClassName="active">Discover</NavLinks>
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="explore">Explore</NavLinks>
+                            <NavLinks to="explore" activeClassName="active">Explore</NavLinks>
                         </NavItem>
 
                         <NavItem>
-                            <NavLinks to="signup">Sign Up</NavLinks>
+                            <NavLinks to="signup" activeClassName="active">Sign Up</NavLinks>
                         </NavItem>
                     </NavMenu>
 

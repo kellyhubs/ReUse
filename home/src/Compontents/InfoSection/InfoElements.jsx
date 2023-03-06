@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 
 // styling the container
-export const AboutContainer = styled.div`
+export const InfoContainer = styled.div`
     color:#fff;
-    background: ${({lightBg}) => (lightBg ? '#9FACA3' : '#FFFBF2')};
+    background: ${({lightBg}) => (lightBg ? '#FFFBF2' : '#CBD2CA')};
 
     @media screen and (max-width: 768px){
         padding: 100px 0;
@@ -12,7 +12,7 @@ export const AboutContainer = styled.div`
 `;
 
 // styling the div that holds all the items
-export const AboutWrapper = styled.div`
+export const InfoWrapper = styled.div`
     display:grid;
     z-index: 1;
     height:860px;
@@ -73,7 +73,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({ lightText }) => (lightText ? '#9FACA3' : '#636363')};
+    color: ${({ lightText }) => (lightText ? '#FFFBF2' : '#9FACA3')};
 
     @media screen and (max-width: 480px){
         font-size: 32px;
@@ -85,7 +85,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({ darkText }) => (darkText ? '#636363' :'#9FACA3' )};
+    color: ${({ darkText }) => (darkText ? '#FFFBF2' :'#636363' )}; 
 `;
 
 // styling button

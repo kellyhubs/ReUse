@@ -1,8 +1,9 @@
 // home page
 
 import React, {useState} from 'react'
-import AboutSection from '../Compontents/AboutSection';
-import { homeObjOne } from '../Compontents/AboutSection/Data';
+import InfoSection from '../Compontents/InfoSection';
+import ExploreSection from '../Compontents/ExploreSection';
+import { homeObjOne, homeObjTwo, homeObjThree } from '../Compontents/InfoSection/Data';
 import FirstSection from '../Compontents/FirstSection';
 import Navbar from '../Compontents/Navbar';
 import Sidebar from '../Compontents/Sidebar';
@@ -29,7 +30,11 @@ const toggle = () => {
 
         {/* About/Info Section */}
         {/* passing in the data from the data.jsx */}
-        <AboutSection {...homeObjOne} /> 
+        <InfoSection {...homeObjOne} /> 
+        <InfoSection {...homeObjTwo} /> 
+        {/* card/market section between the info section */}
+        <ExploreSection/>
+        <InfoSection {...homeObjThree} /> 
         </>
     );
 };

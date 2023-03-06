@@ -3,7 +3,7 @@ import Video from '../../videos/video.mp4'
 import { FirstContainer, FirstBg, VideoBg, FirstContent, FirstH1, FirstP, FirstBtnWrapper, ArrowForward, ArrowRight } from './FirstElements'
 import {Button} from '../ButtonElement' // importing button from components 
 
-const FirstSection = () => {
+const FirstSection = (primary, dark) => {
 
 const [hover, setHover] = useState(false);
 // updating the state 
@@ -32,7 +32,7 @@ return (
 
         {/* button */}
         <FirstBtnWrapper>
-        <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true">
+        <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary={primary ? 1 : 0} dark={dark ? 0 : 1}>
             {/* Changes the icon of the arrow in the button (animation), when the mouse hovers the button the arrow icon toggles */}
             Get Started{hover ? <ArrowForward /> : <ArrowRight /> }
         </Button>
