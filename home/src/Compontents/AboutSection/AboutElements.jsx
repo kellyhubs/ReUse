@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // styling the container
 export const AboutContainer = styled.div`
     color:#fff;
-    background: ${({lightBg}) => (lightBg ? '#FFFBF2' : '#9FACA3')};
+    background: ${({lightBg}) => (lightBg ? '#9FACA3' : '#FFFBF2')};
 
     @media screen and (max-width: 768px){
         padding: 100px 0;
@@ -59,7 +59,7 @@ export const TextWrapper = styled.div`
 
 // styling the texts
 export const TopLine = styled.p`
-    color: #01bf71;
+    color: #C98477;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -73,7 +73,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+    color: ${({ lightText }) => (lightText ? '#9FACA3' : '#636363')};
 
     @media screen and (max-width: 480px){
         font-size: 32px;
@@ -85,7 +85,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({ darkText }) => (darkText ? '#010606' :'#f7f8fa' )};
+    color: ${({ darkText }) => (darkText ? '#636363' :'#9FACA3' )};
 `;
 
 // styling button

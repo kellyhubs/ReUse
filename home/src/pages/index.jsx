@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react'
 import AboutSection from '../Compontents/AboutSection';
+import { homeObjOne } from '../Compontents/AboutSection/Data';
 import FirstSection from '../Compontents/FirstSection';
 import Navbar from '../Compontents/Navbar';
 import Sidebar from '../Compontents/Sidebar';
@@ -27,7 +28,8 @@ const toggle = () => {
             <FirstSection />
 
         {/* About/Info Section */}
-        <AboutSection />
+        {/* passing in the data from the data.jsx */}
+        <AboutSection {...homeObjOne} /> 
         </>
     );
 };
