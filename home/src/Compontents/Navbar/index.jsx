@@ -1,15 +1,23 @@
 import React from 'react'
 import { FaBars } from 'react-icons/fa' // importing react icons
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Navbar = ({ toggle }) => {
+
+    // function when click on logo it will scroll to the top of the page
+const toggleHome = () => {
+    scroll.scrollToTop();
+};
+
+
     return(
         // fragments -> allows you to return multiple compontents instead of using <div>
         <>
         {/* Main navbar */}
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="/">ReUse &nbsp; <i class="fa-solid fa-hand-holding-hand"></i></NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>ReUse &nbsp; <i class="fa-solid fa-hand-holding-hand"></i></NavLogo>
                     {/* react router is similar to <a> but instead it's <link>. href= ->  to=*/}
 
 {/* Small navbar icon */}

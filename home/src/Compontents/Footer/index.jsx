@@ -1,8 +1,16 @@
 import React from 'react'
 import {FaFacebook, FaInstagram, FaGoogle, FaTwitter} from 'react-icons/fa'
 import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, Subtitle, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements';
+import { animateScroll as scroll } from 'react-scroll'; // for the smooth scroll
+
 
 function Footer() {
+
+    // function when click on logo it will scroll to the top of the page
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
 return (
     <>
         <FooterContainer>
@@ -37,7 +45,7 @@ return (
                 {/* social media icons/ credits */}
                 <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/">
+                    <SocialLogo to="/" onClick={toggleHome}>
                         ReUse
                     </SocialLogo>
                     <WebsiteRights>ReUse © {new Date().getFullYear()} 
