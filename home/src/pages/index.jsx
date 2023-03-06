@@ -7,6 +7,7 @@ import { homeObjOne, homeObjTwo, homeObjThree } from '../Compontents/InfoSection
 import FirstSection from '../Compontents/FirstSection';
 import Navbar from '../Compontents/Navbar';
 import Sidebar from '../Compontents/Sidebar';
+import Footer from '../Compontents/Footer';
 
 const Home = () => {
 
@@ -35,6 +36,9 @@ const toggle = () => {
         {/* card/market section between the info section */}
         <ExploreSection/>
         <InfoSection {...homeObjThree} /> 
+
+        {/* footer */}
+        <Footer />
         </>
     );
 };
