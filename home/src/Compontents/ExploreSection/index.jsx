@@ -2,8 +2,7 @@ import React, {useState} from 'react'
 import Icon1 from '/images/campingtools.jpg'
 import Icon2 from '/images/gardeningtools.jpg'
 import Icon3 from '/images/cleaningtools.jpg'
-import { Button } from '../ButtonElement'
-import { ExploreContainer, ExploreH1, ExploreWrapper, ExploreCard, ExploreIcon, ExploreH2 } from './ExploreElements'
+import { ExploreContainer, ExploreH1, ExploreWrapper, ExploreCard, ExploreIcon, ExploreH2, Button } from './ExploreElements'
 
 export const Explore = (primary, dark) => {
 

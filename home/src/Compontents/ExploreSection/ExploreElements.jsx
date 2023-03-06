@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as LinkR } from 'react-router-dom'
 
 // styling the explore container
 export const ExploreContainer = styled.div`
@@ -82,3 +83,25 @@ export const ExploreH2 = styled.h2`
     margin-bottom: 10px;
     color:#636363;
 `;
+
+export const Button = styled(LinkR)`
+border-radius: 50px;
+background: ${({primary})=> (primary ? '#C98477' : '#636363')};
+white-space: nowrap;
+padding: ${({big}) => (big ? '14px 48px': '12px 30px')};
+color: ${({dark}) => (dark ? '#636363': '#FFFBF2')};
+font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
+outline: none;
+border: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover{
+    transition: all 0.2s ease-in-out;
+    background: ${({primary})=> (primary ? '#CBD2CA' : '#E1DBC5')};
+}
+`
