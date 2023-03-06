@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'; // need link because we have links connected to a page (sign in page)
 
-// styling the footer container
+// styling the footer container (spacing)
 export const FooterContainer = styled.footer`
     background-color: #636363;
 `;
@@ -76,4 +76,51 @@ export const Subtitle = styled.p`
     width 160px;
     box-sizing: border-box;
     color: #FFFBF2;
+`;
+
+// styling the footer social media 
+export const SocialMedia = styled.div`
+    max-width: 1000px;
+    width: 100%;
+`;
+
+export const SocialMediaWrap = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+
+    @media screen and (max-width: 820px){
+        flex-direction: column 
+    }
+`;
+
+export const SocialLogo = styled(Link)`
+    color: #FFFBF2;
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: bold;
+`; 
+
+export const WebsiteRights = styled.small`
+    color: #fffbf2;
+    margin-bottom: 16px;
+`;
+
+export const SocialIcons = styled.div`
+    display:flex;
+    align-items: center;
+    width: 240px;
+`;
+
+export const SocialIconLink = styled.a`
+    color: #fffbf2;
+    font-size: 24px;
+
 `;
