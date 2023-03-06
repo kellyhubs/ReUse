@@ -41,8 +41,8 @@ export const homeObjTwo = {
 // signup section Object
 export const homeObjThree = {
     id: 'signup',
-    lightBg: true,
-    lightText: false,
+    lightBg: false,
+    lightText: true,
     lightTextDesc: false,
     topLine: 'Join the Community',
     headline: 'Getting Started is Easy',
@@ -52,6 +52,6 @@ export const homeObjThree = {
     img: '/images/svg-3.svg',
     alt: 'heart',
     dark: true,
-    primary: true,
+    primary: false,
     darkText: false
 }

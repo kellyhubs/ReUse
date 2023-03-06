@@ -7,7 +7,7 @@ export const ExploreContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    background: #CBD2CA;
+    background: #FFFBF2;
 
     @media screen and (max-width: 768px){
         height: 1100px;
@@ -68,7 +68,7 @@ export const ExploreIcon = styled.img`
 // styling the H1 
 export const ExploreH1 = styled.h1`
     font-size: 2.5rem;
-    color:#FFFBF2;
+    color:#9FACA3;
     margin-bottom: 64px;
 
     @media screen and (max-width: 480px){
@@ -80,4 +80,5 @@ export const ExploreH1 = styled.h1`
 export const ExploreH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
+    color:#636363;
 `;
