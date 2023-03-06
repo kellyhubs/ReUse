@@ -1,10 +1,16 @@
-import React from 'react'
+// sign in page
+
+import React from 'react';
+import ScrollToTop from '../Compontents/ScrollToTop';
+import SignIn from '../Compontents/Signin';
+
 
 export const SigninPage = () => {
 return (
-    <div>
-        <h1>Sign in page (add code here I already added route between pages [no back end yet]) </h1>
-    </div>
+    <>
+    <ScrollToTop />
+        <SignIn />
+    </>
 )
 }
 
