@@ -44,7 +44,19 @@ router.delete("/:id", async (req,res) => {
     }
 });
 
-// getting the user 
+//  GETTING A USER
+router.get("/:id", async (req,res) => {
+    try{
+        const user = await User.findById(req.params.id); //grabbing the user id 
+        const {password, updatedAt, ...other} = user._doc //._doc carries all the objects , we only send back info instead without password, updatedAt 
+        res.status(200).json(other) //gives back the info in json
+    }catch(err){
+        res.status(500).json(err) //else catch error
+    }
+});
+
+
+
 // follow users 
 // unfollow users 
 
