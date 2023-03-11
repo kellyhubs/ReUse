@@ -3,9 +3,6 @@ import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' //react router to move between pages
 import Home from './pages'
 import SigninPage from './pages/signin';
-import MarketPlace from './pages/MarketPlace';
-import Garden from './pages/garden';
-import GardenItem from './pages/GardenItem'
 
 function App() {
   return(
