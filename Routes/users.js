@@ -27,9 +27,23 @@ router.put("/:id", async (req,res) => {
     } else {
         return res.status(403).json("You cannot update this account")
     }
-})
+});
 
-// deleting the user
+// DELETING USER 
+router.delete("/:id", async (req,res) => { 
+    //verifying user id -> if they match the user can update their account , not match -> cannot update/delete, unless admin
+    if(req.body.userId === req.params.id || req.body.isAdmin){
+        try{
+            const user = await User.findByIdAndDelete(req.params.id); //finds the id and deletes 
+            res.status(200).json("Account has been deleted"); //sends a message that updated completed
+        } catch(err) {
+            return res.status(500).json(err); 
+        }
+    } else {
+        return res.status(403).json("You cannot delete this account")
+    }
+});
+
 // getting the user 
 // follow users 
 // unfollow users 
