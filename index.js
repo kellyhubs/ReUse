@@ -11,6 +11,7 @@ const morgan = require("morgan");
 // exporting routes
 const userRoute = require("./Routes/users");
 const authRoute = require("./Routes/auth");
+const postRoute = require("./Routes/posts");
 
 // connecting database
 const mongoose = require("mongoose");
@@ -23,9 +24,10 @@ mongoose.connect(process.env.URI)
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
-
+app.use("/api/posts", postRoute);
 
 // app listener 
 app.listen(3001, ()=> {console.log("Backend server is running!")});
