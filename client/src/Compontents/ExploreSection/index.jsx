@@ -21,7 +21,7 @@ export const Explore = (primary, dark) => {
     return (
         <>
             <ExploreContainer id="explore">
-                <ExploreH1>Explore the Rental Place</ExploreH1>
+                <ExploreH1>Explore the Rental Place between Others</ExploreH1>
                 <ExploreWrapper>
                     {/* card 1  */}
                     <ExploreCard>
