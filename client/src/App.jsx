@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' //react router to move between pages
 import Home from './pages'
 import SigninPage from './pages/signin';
+import UserFeedPage from './pages/userfeed';
 
 function App() {
   return(
@@ -14,6 +15,9 @@ function App() {
 
         {/* route to sign in page */}
         <Route path="/signin" element={<SigninPage />} />
+
+        {/* route to userfeed page */}
+        <Route path="/feed" element={<UserFeedPage />} />
       </Routes>
     </Router>
   );
