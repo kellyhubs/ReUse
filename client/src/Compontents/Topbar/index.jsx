@@ -19,11 +19,11 @@ export const Topbar = () => {
       <div className="topbarRight">
         <div className='topbarLinks'>
           <span className="topbarLink">Profile</span>
-          <span className="topbarLink">Feed</span>
+          <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-          <i class="fa-solid fa-users"></i>
+          <i class="fa-solid fa-user"></i>
             <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">

@@ -1,6 +1,81 @@
+/* styling the size */
 .sidebar{
     flex: 3;
     height: calc(100vh - 50px);
-    background-color:aquamarine;
+    overflow-y: scroll;
+    position: sticky;
+    top:50px;
+}
 
+/* hiding the scrollbar */
+::-webkit-scrollbar{
+    width:5px;
+}
+
+/* track is the color behind the bar */
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+/* color of the scroll bar */
+::-webkit-scrollbar-thumb{
+    background-color: rgb(179,179,179);
+}
+
+.sidebarWrapper{
+    padding: 20px;
+    
+}
+
+/* spacing of the sidebar items */
+.sidebarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* styling of each item (li) */
+.sidebarListItem{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#sidebarIcon{
+    margin-right: 15px;
+}
+
+/* styling button */
+.sidebarButton{
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* styling hr bar */
+.sidebarHr{
+    margin: 20px 0;
+}
+
+/* styling side bar friend list */
+.sidebarFriendList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebarFriend{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebarFriendImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
 }
