@@ -7,7 +7,7 @@ const SignIn = () => {
         <>
             <Container>
                 <FormWrap>
-                    <Icon to="/">ReUse &nbsp; <i class="fa-solid fa-hand-holding-hand"></i></Icon>
+                    <Icon to="/">ReUse &nbsp; <i className="fa-solid fa-hand-holding-hand"></i></Icon>
                     <FormContent>
                         {/* actual form */}
                         <Form action="#">

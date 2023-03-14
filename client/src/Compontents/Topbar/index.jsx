@@ -6,12 +6,12 @@ export const Topbar = () => {
     // navbar of the userfeed page
     <div className='topbarContainer'>
       <div className="topbarLeft">
-        <span className="logo">ReUse&nbsp; <i class="fa-solid fa-hand-holding-hand"></i></span>
+        <span className="logo">ReUse&nbsp; <i className="fa-solid fa-hand-holding-hand"></i></span>
       </div>
 
       <div className="topbarCenter">
         <div className='searchbar'>
-        <i class="fa-solid fa-magnifying-glass"></i> &nbsp;
+        <i className="fa-solid fa-magnifying-glass"></i> &nbsp;
         <input placeholder="Search" type="text" className="searchInput" />
         </div>
       </div>
@@ -23,15 +23,15 @@ export const Topbar = () => {
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-          <i class="fa-solid fa-user"></i>
+          <i className="fa-solid fa-user"></i>
             <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">
-          <i class="fa-solid fa-message"></i>
+          <i className="fa-solid fa-message"></i>
             <span className="topbarIconBadge">2</span>
           </div>
           <div className="topbarIconItem">
-          <i class="fa-solid fa-bell"></i>
+          <i className="fa-solid fa-bell"></i>
             <span className="topbarIconBadge">1</span>
           </div>
         </div>

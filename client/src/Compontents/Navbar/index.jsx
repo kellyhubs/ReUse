@@ -17,7 +17,7 @@ const toggleHome = () => {
         {/* Main navbar */}
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="/" onClick={toggleHome}>ReUse &nbsp; <i class="fa-solid fa-hand-holding-hand"></i></NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>ReUse &nbsp; <i className="fa-solid fa-hand-holding-hand"></i></NavLogo>
                     {/* react router is similar to <a> but instead it's <link>. href= ->  to=*/}
 
 {/* Small navbar icon */}

@@ -16,19 +16,19 @@ const Share = () => {
             <div className="shareBottom">
                 <div className="shareOptions">
                     <div className="shareOption">
-                    <i class="fa-solid fa-photo-film" id="shareIcon"></i>
+                    <i className="fa-solid fa-photo-film" id="shareIcon"></i>
                         <span className='shareOptionText'>Photo or Video</span>
                     </div>
                     <div className="shareOption">
-                    <i class="fa-solid fa-tags" id="shareIcon"></i>
+                    <i className="fa-solid fa-tags" id="shareIcon"></i>
                         <span className='shareOptionText'>Tag</span>
                     </div>
                     <div className="shareOption">
-                    <i class="fa-solid fa-location-dot" id="shareIcon"></i>
+                    <i className="fa-solid fa-location-dot" id="shareIcon"></i>
                         <span className='shareOptionText'>Location</span>
                     </div>
                     <div className="shareOption">
-                    <i class="fa-solid fa-face-smile" id="shareIcon"></i>
+                    <i className="fa-solid fa-face-smile" id="shareIcon"></i>
                         <span className='shareOptionText'>Feelings</span>
                     </div>
                 </div>

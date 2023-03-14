@@ -23,7 +23,7 @@ return (
                             <BtnWrap>
                                 {/* attributes on the button is for react-scroll, spy is needed for the active class  */}
                                 {/* primary attribute ->  1 = true, 0 = false */}
-                                <Button to="home" smooth={true} duration={500} spy="true" offset={-80} primary={primary ? 1 : 0 } dark={dark ? 0: 1} dark2={dark2 ? 1:0}>{buttonLabel}</Button>
+                                <Button to="home" smooth={true} duration={500} spy={true} offset={-80} primary={primary ? 1 : 0 } dark={dark ? 0: 1} dark2={dark2 ? 1:0}>{buttonLabel}</Button>
                             </BtnWrap>
                         </TextWrapper>
 

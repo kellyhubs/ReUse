@@ -8,39 +8,39 @@ export function FeedSidebar() {
         <div className="sidebarWrapper">
           <ul className="sidebarList">
             <li className="sidebarListItem">
-            <i class="fa-solid fa-house" id="sidebarIcon"></i>
+            <i className="fa-solid fa-house" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Home</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-message" id="sidebarIcon"></i>
+            <i className="fa-solid fa-message" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Chats</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-user-group" id="sidebarIcon"></i>
+            <i className="fa-solid fa-user-group" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Groups</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-bookmark" id="sidebarIcon"></i>
+            <i className="fa-solid fa-bookmark" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Saved</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-calendar" id="sidebarIcon"></i>
+            <i className="fa-solid fa-calendar" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Events</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-newspaper" id="sidebarIcon"></i>
+            <i className="fa-solid fa-newspaper" id="sidebarIcon"></i>
             <span className="sidebarListItemText">News</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-circle-play" id="sidebarIcon"></i>
+            <i className="fa-solid fa-circle-play" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Videos</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-clock-rotate-left" id="sidebarIcon"></i>
+            <i className="fa-solid fa-clock-rotate-left" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Memories</span>
             </li>
             <li className="sidebarListItem">
-            <i class="fa-solid fa-circle-question" id="sidebarIcon"></i>
+            <i className="fa-solid fa-circle-question" id="sidebarIcon"></i>
             <span className="sidebarListItemText">Questions</span>
             </li>
           </ul>
