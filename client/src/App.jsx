@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' //react router to move between pages
 import Home from './pages'
 import SigninPage from './pages/signin';
+import Mainpost from './pages/mainPost';
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
 
         {/* route to sign in page */}
         <Route path="/signin" element={<SigninPage />} />
+
+        {/* route to mainPost page */}
+        <Route path="/feed" element={<Mainpost />} />
       </Routes>
     </Router>
   );
