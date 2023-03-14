@@ -1,6 +1,8 @@
 import dotenv from 'dotenv'; //getting .env file
 dotenv.config();
 
+const PORT = process.env.PORT || 5000; //getting the port
+
 // importing express
 import express from 'express';
 const app = express();
@@ -30,4 +32,4 @@ mongoose.connect(process.env.URI)
 
 
 // app listener 
-app.listen(3001, ()=> {console.log("Backend server is running!")});
+app.listen(PORT, ()=> {console.log("Backend server is running!")});
