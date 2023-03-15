@@ -20,6 +20,7 @@ app.use(cors());
 
 // exporting the routes
 app.use('/posts', postRoutes); //every route inside posts routes going to start with posts
+// app.use("/user", userRouter); //building a user route
 
 // connecting database
 import mongoose from "mongoose";

@@ -45,6 +45,7 @@ export const updatePost = async (req,res) =>{
     res.json(updatedPost);
 }
 
+// DELETE ROUTE
 export const deletePost = async (req, res) => {
     const { id } = req.params;
 

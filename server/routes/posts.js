@@ -16,4 +16,6 @@ router.patch('/:id', updatePost);
 // DELETE REQUEST
 router.delete('/:id', deletePost);
 
+
+
 export default router; //exporting the router
