@@ -4,6 +4,7 @@ const API = axios.create({ baseURL: 'http://localhost:5000' }); //specifying the
 
 // function to fetch post requests from our url(backend) , returns the database 
 export const fetchPosts = () => API.get('/posts');
+
 // create post 
 export const createPost = (newPost) => API.post('/posts', newPost);
 
