@@ -3,6 +3,7 @@
 
 import mongoose from 'mongoose';
 import PostMessage from '../models/postMessage.js';
+import router from '../routes/posts.js';
 
 
 // GET ROUTE
@@ -54,5 +55,18 @@ export const deletePost = async (req, res) => {
     await PostMessage.findByIdAndRemove(id);
 
     res.json({ message: "Post deleted successfully." });
+}
+
+// LIKING A POST 
+export const likePost = async (req, res) => {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    
+    const post = await PostMessage.findById(id);
+
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, { likeCount: post.likeCount + 1 }, { new: true }); // add into the empty array + 1 for like post once find the post message id 
+    
+    res.json(updatedPost);
 }
 
