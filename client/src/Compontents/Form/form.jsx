@@ -27,14 +27,14 @@ const clear = () => {
     return (
         // paper is styling from mui  -> its a div with a white background 
         <Paper sx={{ padding: (theme) => theme.spacing(2) }}>
-            <form autoComplete='off' noValidate onSubmit={handleSubmit} styles={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }} >
+            <form autoComplete='off' noValidate onSubmit={handleSubmit} style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }} >
             <Typography variant='h6'>What's happening?</Typography>
             <TextField name="creator" variant="outlined" label="Creator" fullWidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value })} sx={{ marginBottom: '10px', marginTop: '10px' }} /> 
             {/* //in every text field this will only change the creator value/> */}
             <TextField name="title" variant="outlined" label="Title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} sx={{ marginBottom: '10px', marginTop: '10px' }}  />
             <TextField name="message" variant="outlined" label="Message" fullWidth value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} sx={{ marginBottom: '10px', marginTop: '10px'}} />
             <TextField name="tags" variant="outlined" label="Tags" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value })} sx={{ marginBottom: '10px', marginTop: '10px' }} />
-            <div styles={{ width: '97%', margin: '10px 0'}}>
+            <div style={{ width: '97%', margin: '10px 0'}}>
                 <FileBase type="file" multiple={false} onDone={({base64}) => setPostData({ ... postData, selectedFile: base64})} /></div> {/* upload images  */}
 
             <Button variant="contained" size="large" type="submit" sx={{ marginBottom: '10px', marginTop: '10px', backgroundColor: '#9FACA3'}} fullWidth> Submit</Button>

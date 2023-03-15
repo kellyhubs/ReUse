@@ -14,7 +14,7 @@ export default (posts = [], action) => {
         default:
             return posts;
     }
-}
+};
 
 
 // using this function in index.jsx file 
