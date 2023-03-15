@@ -1,6 +1,7 @@
 // creating all of the handlers for our routes 
 // putting all the logic and requests in here and then import to the routes 
 
+import mongoose from 'mongoose';
 import PostMessage from '../models/postMessage.js';
 
 
@@ -26,4 +27,20 @@ export const createPost = async (req,res) =>{
     } catch(err){
         res.status(409).json({ messsage: err.message }); //else catch error 
     }
+}
+
+
+// UPDATE ROUTE
+export const updatePost = async (req,res) =>{
+    const { id:_id } = req.params; //_id is a mongoose object id
+    const post = req.body //the whole updated post is passed though req.body
+
+// check to see if the _id is valid and is a mongoose object , if not valid send status 404
+    if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('No Post with that id');
+
+    // if the id IS VALID -> update the post
+    const updatedPost = await PostMessage.findByIdAndUpdate(_id, post, {new: true });
+
+    res.json(updatePost);
+
 }
