@@ -7,6 +7,8 @@
 
 export default (posts = [], action) => {
     switch (action.type){
+        case 'LIKE':
+            return posts.map((post) => (post._id === action.payload._id ? action.payload : post)); //post id is = to the id of the post else map (new array )  for the liked post 
         case 'DELETE':
             return posts.filter((post) => post._id !== action.payload);
         case 'UPDATE':

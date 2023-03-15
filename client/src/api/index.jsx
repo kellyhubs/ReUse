@@ -13,3 +13,6 @@ export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updated
 
 //deleting post
 export const deletePost = (id) => API.delete(`/posts/${id}`);
+
+// liking a post 
+export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
