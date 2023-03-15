@@ -20,11 +20,21 @@ export const getPosts = () => async (dispatch) => {
 };
 
 
-// creating the post
+// creating the posts
 export const createPost = (post) => async (dispatch) => {
     try{
         const { data } = await api.createPost(post); //making a api request to make a post to the back end server 
         dispatch({ type: 'CREATE', payload: data });
+    }catch(error){
+        console.log(error.message)
+    }
+};
+
+// updating the posts
+export const updatePost = (id, post) => async (dispatch) => {
+    try{
+        const { data } = await api.updatePost(id, post); //making the api request to update the post to the back end 
+        dispatch({ type: 'UPDATE', payload: data }); //returning the updated memory of the post
     }catch(error){
         console.log(error.message)
     }

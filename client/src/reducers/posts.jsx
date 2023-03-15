@@ -7,6 +7,10 @@
 
 export default (posts = [], action) => {
     switch (action.type){
+        case 'UPDATE':
+            // returning the changed array
+            // if post._id is = to the action.payload (updated post) then return the action.payload (newly updated post) else return just the post as it was before without the updates
+            return posts.map((post) => (post._id === action.payload._id ? action.payload : post));
         case 'FETCH_ALL':
             return action.payload;
         case 'CREATE':

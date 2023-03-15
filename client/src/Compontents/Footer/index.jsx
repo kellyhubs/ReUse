@@ -20,7 +20,7 @@ return (
                     {/* spacing around the links */}
                     <FooterLinksWrapper>
                         {/* Footer items */}
-                        <FooterLinkItems>
+                        {/* <FooterLinkItems>
                             <FooterLinkTitle>Links</FooterLinkTitle>
                             <FooterLink to="/">Home</FooterLink>
                                 <FooterLink to="/">About</FooterLink>
@@ -28,7 +28,7 @@ return (
                                 <FooterLink to="/">Explore</FooterLink>
                                 <FooterLink to="/signup">Sign Up</FooterLink>
                                 <FooterLink to="/signin">Sign In</FooterLink>
-                        </FooterLinkItems>
+                        </FooterLinkItems> */}
 
                         <FooterLinkItems>
                             <FooterLinkTitle>Contact Us</FooterLinkTitle>
