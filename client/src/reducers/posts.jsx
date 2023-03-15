@@ -7,6 +7,8 @@
 
 export default (posts = [], action) => {
     switch (action.type){
+        case 'DELETE':
+            return posts.filter((post) => post._id !== action.payload);
         case 'UPDATE':
             // returning the changed array
             // if post._id is = to the action.payload (updated post) then return the action.payload (newly updated post) else return just the post as it was before without the updates

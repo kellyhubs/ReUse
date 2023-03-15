@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Video from '../../videos/video.mp4'
 import { FirstContainer, FirstBg, VideoBg, FirstContent, FirstH1, FirstP, FirstBtnWrapper, ArrowForward, ArrowRight } from './FirstElements'
-import {Button} from '../ButtonElement' // importing button from components 
+import {Button} from '../../../ButtonElement' // importing button from components 
 
 const FirstSection = (primary, dark) => {
 

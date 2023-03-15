@@ -1,6 +1,6 @@
 // CRUD ROUTES => localhost: 3001/posts
 import express from 'express';
-import { getPosts, createPost, updatePost } from '../controllers/posts.js' //grabbing from the controller folder
+import { getPosts, createPost, updatePost, deletePost} from '../controllers/posts.js' //grabbing from the controller folder
 
 const router = express.Router(); //router
 
@@ -11,6 +11,9 @@ router.get('/', getPosts);
 router.post('/', createPost);
 
 // UPDATE REQUEST 
-router.patch('/:id', updatePost)
+router.patch('/:id', updatePost);
+
+// DELETE REQUEST
+router.delete('/:id', deletePost);
 
 export default router; //exporting the router

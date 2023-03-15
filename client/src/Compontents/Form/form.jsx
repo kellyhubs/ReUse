@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { TextField, Button, Typography, Paper } from '@mui/material';
-import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
+import FileBase from 'react-file-base64';
 import { createPost, updatePost } from '../../actions/posts';
 
 
@@ -25,23 +25,22 @@ useEffect(() => {
 
 // clears off data once updating or creating a post 
 const clear = () => {
-    setCurrentId(null);
+    setCurrentId(0);
     setPostData({ creator: '', title: '', message:'', tags:'', selectedFile:''});
 };
 
 // use the dispatch on the handle submit -> create post when click on submit
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault(); //get no refresh in the browser
     
     // if we have the current id (id is not null) then it goes to the else statement and dispatch the update post, if the id is null then -> create the post
     if(currentId === 0){
         dispatch(createPost(postData));
-        
+        clear();
     } else {
         dispatch(updatePost(currentId, postData)); //to update post we need the currentId
-        
+        clear();
     }
-    clear();
 };
 
 

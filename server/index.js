@@ -1,15 +1,13 @@
 import dotenv from 'dotenv'; //getting .env file
 dotenv.config();
 
-const PORT = process.env.PORT || 5000; //getting the port
-
 // importing express
 import express from 'express';
 const app = express();
+const PORT = process.env.PORT || 5000; //getting the port
 
 // importing middleware ->making request to server and makes it secure when passing in data (properties)
 import cors from 'cors';
-import morgan from "morgan";
 
 // exporting routes
 import postRoutes from './routes/posts.js';

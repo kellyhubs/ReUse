@@ -8,7 +8,7 @@ import Form from '../Form/form';
 
 const mainPost = () => {
 
-    const [currentId, setCurrentId] = useState(null); 
+    const [currentId, setCurrentId] = useState(0); 
     
     // using hooks to connect to redux to connect the back end
     const dispatch = useDispatch();

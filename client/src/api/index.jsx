@@ -1,12 +1,14 @@
 import axios from 'axios'; //axios is used to make api calls for the front end
 
-const url = 'http://localhost:5000/posts'; //specifying the string running in the back end
+const API = axios.create({ baseURL: 'http://localhost:5000' }); //specifying the string running in the back end
 
 // function to fetch post requests from our url(backend) , returns the database 
-export const fetchPosts = () => axios.get(url);
-
+export const fetchPosts = () => API.get('/posts');
 // create post 
-export const createPost = (newPost) => axios.post(url, newPost);
+export const createPost = (newPost) => API.post('/posts', newPost);
 
 // update post
-export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost); 
+export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
+
+//deleting post
+export const deletePost = (id) => API.delete(`/posts/${id}`);

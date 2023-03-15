@@ -1,6 +1,6 @@
 
 
-import * as api from '../api' //import * means that we import everything from the action folder as api 
+import * as api from '../api/index.jsx'; //import * means that we import everything from the action folder as api 
 
 // Action creators -> are functions that return actions 
     // actions is an object with a payload of data 
@@ -15,7 +15,7 @@ export const getPosts = () => async (dispatch) => {
         dispatch ({ type: 'FETCH_ALL', payload: data});
         // disaptching the action and the payload is the data dispatch and patch from the backend using redux
     }catch(error){
-        console.log(error.message)
+        console.log(error)
     }
 };
 
@@ -26,7 +26,7 @@ export const createPost = (post) => async (dispatch) => {
         const { data } = await api.createPost(post); //making a api request to make a post to the back end server 
         dispatch({ type: 'CREATE', payload: data });
     }catch(error){
-        console.log(error.message)
+        console.log(error)
     }
 };
 
@@ -36,6 +36,17 @@ export const updatePost = (id, post) => async (dispatch) => {
         const { data } = await api.updatePost(id, post); //making the api request to update the post to the back end 
         dispatch({ type: 'UPDATE', payload: data }); //returning the updated memory of the post
     }catch(error){
-        console.log(error.message)
+        console.log(error)
     }
 };
+
+// deleting posts
+export const deletePost = (id) => async (dispatch) => {
+    try {
+      await api.deletePost(id);
+  
+      dispatch({ type: 'DELETE', payload: id });
+    } catch (error) {
+      console.log(error);
+    }
+  };

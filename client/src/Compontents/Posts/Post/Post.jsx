@@ -3,12 +3,14 @@ import {Card, CardActions, CardContent, CardMedia, Button, Typography } from '@m
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
-
+import { deletePost } from '../../../actions/posts'
 
 // destructure the props -> post
 const Post = ({ post, setCurrentId }) => {
 
+    const dispatch = useDispatch();
 
 
 
@@ -38,10 +40,10 @@ const Post = ({ post, setCurrentId }) => {
 
             <CardActions style={{padding:'0 16px 8px 16px', display: 'flex', justifyContent:'space-between'}} >
                 <Button size='small' color="primary" onClick={() => {}}><ThumbUpAltIcon fontSize='small'/>Like {post.likeCount}</Button>
-                <Button size='small' color="primary" onClick={() => {}}><DeleteIcon fontSize='small'/>Delete</Button>
+                <Button size='small' color="primary" onClick={() => dispatch(deletePost(post._id))}><DeleteIcon fontSize='small'/>Delete</Button>
             </CardActions>
     </Card>
     );
-}
+};
 
 export default Post;
