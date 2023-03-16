@@ -3,7 +3,7 @@
 
 import mongoose from 'mongoose';
 import PostMessage from '../models/postMessage.js';
-import router from '../routes/posts.js';
+
 
 
 // GET ROUTE
@@ -50,9 +50,9 @@ export const updatePost = async (req,res) =>{
 export const deletePost = async (req, res) => {
     const { id } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`); //if cant find id then cannot delete
 
-    await PostMessage.findByIdAndRemove(id);
+    await PostMessage.findByIdAndRemove(id); //if found id then delete
 
     res.json({ message: "Post deleted successfully." });
 }
@@ -61,11 +61,29 @@ export const deletePost = async (req, res) => {
 export const likePost = async (req, res) => {
     const { id } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
-    
+    // modifying that users can liked posts once 
+    if(!req.userId) return res.json({ message: 'Unauthenticated'});
+
+// check to see if the post that the user wants to like
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`); // if the post id not exist send error
+
+    // then get the actual post by finidng its id 
     const post = await PostMessage.findById(id);
 
-    const updatedPost = await PostMessage.findByIdAndUpdate(id, { likeCount: post.likeCount + 1 }, { new: true }); // add into the empty array + 1 for like post once find the post message id 
+    // see if the user's id is already in the like section or not 
+    const index = post.likes.findIndex((id) => id === String(req.userId)) //looping all the ids from the specific person and thats how we know who liked the specific post -> converting the user id into a string aand compare it ot the id 
+    
+    // if the user already like -> turn into a dislike 
+    if (index === -1){
+        // like the post
+        post.likes.push(req.userId); //push into the likes array
+    }else{
+        // delete the like -> dislike 
+        post.likes = post.likes.filter((id) => id !== String(req.userId)); //filter the id out of the likes array 
+    }
+
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, post , { new: true }); // add into the empty array + 1 for like post once find the post message id if found post id 
+    // update the post
     
     res.json(updatedPost);
 }

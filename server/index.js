@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 5000; //getting the port
 import cors from 'cors';
 
 // exporting routes
-import postRoutes from './routes/posts.js';
-import bodyParser from 'body-parser';
+import postRoutes from './routes/posts.js'; //post route
+import userRoutes from './routes/users.js'; //user route
+import bodyParser from 'body-parser'; //middle ware 
 
 // using the middleware
 app.use(bodyParser.json({ limit: '30mb', extended: true})); //sending images 
@@ -20,7 +21,7 @@ app.use(cors());
 
 // exporting the routes
 app.use('/posts', postRoutes); //every route inside posts routes going to start with posts
-// app.use("/user", userRouter); //building a user route
+app.use("/user", userRoutes); //building a user route
 
 // connecting database
 import mongoose from "mongoose";
