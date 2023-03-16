@@ -1,33 +1,48 @@
 import React, { useState } from 'react'
-
+import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
+
+import {  signup, signin } from '../../actions/auth';
 import Input from './Input'; //input the intput fields 
 
 
-
+// making a new variable initialstate of the data to be empty 
+const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const Auth = () => {
+  
+  const [isSignup, setIsSignup] = useState(false); //changing the state of when clicking the button to sign up or sign in 
+  const [formData, setFormData] = useState(initialState) // the initial state will be empty when seeing the form -> the form data is empty 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [isSignup, setIsSignup] = useState(false); //changing the state of when clicking the button to sign up or sign in 
-
   const handleShowPassword = () => setShowPassword(!showPassword); //toggling the show password on and off 
   
   // switch mode for the switch to between the forms using setIsSignup state
   const switchMode = () => {
-    // setForm(initialState); 
+    setFormData(initialState); 
     setIsSignup((prevIsSignup) => !prevIsSignup); //makes the switch 
     setShowPassword(false);
   };
   
-  const handleSubmit = () => {
-
+  // change the state of the form once clicked on handle submit 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // two different types of submits -> sign up and sign in 
+    if(isSignup){
+      dispatch(signup(formData, navigate)); //dispatch an action -> sign up action -> pass the entire form data -> navigate the "history"
+    } else {
+        dispatch(signin(formData, navigate)); // else dispatch an action to sign in 
+    }
   };
 
-  const handleChange = () => {
-
+  // once put in data instead of getting back an empty array -> give it the handlechange function to plug in the data in (only update the data the user inputs ) changes the initial data 
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value})
   } 
 
 
@@ -46,8 +61,8 @@ const Auth = () => {
               {/* login form/sign  up */}  
                     { isSignup && (
                       <>
-                          <Input name="firstname" label='First Name' handleChange={handleChange} style={{ margin: (theme) => theme.spacing(1)}} autoFocus half />
-                          <Input name="lastname" label='Last Name' handleChange={handleChange} style={{ margin: (theme) => theme.spacing(1)}} half />
+                          <Input name="firstName" label='First Name' handleChange={handleChange} style={{ margin: (theme) => theme.spacing(1)}} autoFocus half />
+                          <Input name="lastName" label='Last Name' handleChange={handleChange} style={{ margin: (theme) => theme.spacing(1)}} half />
                       </>
                     )}
                       <Input name="email" label="Email Address" handleChange={handleChange} type="email" style={{ margin: (theme) => theme.spacing(1)}} />
