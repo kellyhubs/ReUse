@@ -1,3 +1,5 @@
+// blue print of the input field for the form sign up/sign in (Auth)
+
 import React from 'react'
 import { TextField, Grid, InputAdornment, IconButton } from '@mui/material'
 
